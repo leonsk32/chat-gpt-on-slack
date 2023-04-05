@@ -1,0 +1,20 @@
+display_information:
+  name: ChatGPT bot
+features:
+  bot_user:
+    display_name: ChatGPT bot
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - chat:write
+settings:
+  event_subscriptions:
+    request_url: <put the URL of API Gateway>
+    bot_events:
+      - app_mention
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
