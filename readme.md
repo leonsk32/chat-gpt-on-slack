@@ -15,10 +15,10 @@ yarn deploy --aws-profile <profile>
 ```
 
 ## Setup Slack bot
-- Once you deploy the serverless resources, you will get the URL of API Gateway
-  - e.g. https://xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/slack/events
+- Once you deploy the serverless resources, you will get the Lambda function URL
+  - e.g. https://xxxxxxxxx.lambda-url.ap-northeast-1.on.aws/
 - Copy [slack-app-manifest-template.yaml](./slack-app-manifest-template.yaml) to `slack-app-manifest.yaml`
-  - Replace the URL for event subscription with the API Gateway URL
+  - Replace the URL for event subscription with the Lambda function URL
 - Create Slack application from [Applications](https://api.slack.com/apps) using the manifest file.
 - Install the application to your workspace
 - replace secrets in the `.env` file with the values from Slack and OpenAI
